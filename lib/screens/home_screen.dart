@@ -1,4 +1,5 @@
 import 'package:book_tickets_app/controllers/constants.dart';
+import 'package:book_tickets_app/screens/hotel_screen.dart';
 import 'package:book_tickets_app/screens/ticket_view.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
@@ -12,7 +13,6 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Styles.bgColor,
       body: ListView(
-        
         // Good Morning, Book tickets, Image
 
         children: [
@@ -114,7 +114,50 @@ class HomeScreen extends StatelessWidget {
                 TicketView(),
               ],
             ),
-          )
+          ),
+
+          // hotels and view all section
+
+          const Gap(15),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  'Hotels',
+                  style: Styles.headLineStyle2,
+                ),
+                InkWell(
+                  onTap: () {
+                    //debugPrint('youre tapped');
+                  },
+                  child: Text(
+                    'View All',
+                    style: Styles.textStyle.copyWith(
+                      color: Styles.primaryColor,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+
+          // hotels list
+          
+          const Gap(15),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            padding: const EdgeInsets.only(left: 20),
+            child: Row(
+              children: const [
+                HotelScreen(),
+                HotelScreen(),
+                HotelScreen(),
+                HotelScreen(),
+              ],
+            ),
+          ),
         ],
       ),
     );
