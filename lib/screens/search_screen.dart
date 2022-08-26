@@ -148,7 +148,7 @@ class SearchScreen extends StatelessWidget {
                         width: size.width * 0.44,
                         height: AppLayout.getHeight(200),
                         decoration: BoxDecoration(
-                          color: Color(0xFF3AB8B8),
+                          color: const Color(0xFF3AB8B8),
                           borderRadius:
                               BorderRadius.circular(AppLayout.getHeight(18)),
                         ),

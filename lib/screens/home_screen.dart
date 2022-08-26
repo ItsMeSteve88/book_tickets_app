@@ -35,7 +35,7 @@ class HomeScreen extends StatelessWidget {
                         ),
                         const Gap(5),
                         Text(
-                          'Book Tickets',
+                          'User',
                           style: Styles.headLineStyle1,
                         ),
                       ],

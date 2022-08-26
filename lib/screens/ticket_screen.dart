@@ -14,7 +14,7 @@ class TicketScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final size = AppLayout.getSize(context);
+    //final size = AppLayout.getSize(context);
     return Scaffold(
       backgroundColor: Styles.bgColor,
       body: Stack(
@@ -73,7 +73,7 @@ class TicketScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: const [
                         AppColumnLayout(
-                          firstText: 'Flutter ST',
+                          firstText: 'User',
                           secondText: 'Passenger',
                           alignment: CrossAxisAlignment.start,
                           isColor: false,
